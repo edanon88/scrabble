@@ -15,5 +15,23 @@ def score_word(word):
 	return point_total
 
 # Testing
-user_word=input ("Word: ")
-print("Score: " + str(score_word(user_word)))
+#user_word=input ("Word: ")
+#print("Score: " + str(score_word(user_word)))
+
+# Creating dictionary of words played by each player
+player_to_words = {"player1":["blue", "tennis", "exit"], "wordNerd":["earth", "eyes", "machine"], "Lexi Con":["eraser", "belly", "husky"], "Prof Reader":["zap", "coma", "period"]}
+
+
+# Dictionary to keep score
+player_to_points={}
+
+# Print list of words and their scores and calculate totalCalculate score
+def keep_score()
+	for player in player_to_words:
+		print(player)
+		player_points=0
+		for word in player_to_words[player]:
+			print(word + " : " + str(score_word(word)))
+			player_points+=score_word(word)		
+		player_to_points[player]=player_points
+		print ("Total: "+str(player_points))
