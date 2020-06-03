@@ -26,7 +26,7 @@ player_to_words = {"player1":["blue", "tennis", "exit"], "wordNerd":["earth", "e
 player_to_points={}
 
 # Print list of words and their scores and calculate totalCalculate score
-def keep_score()
+def keep_score():
 	for player in player_to_words:
 		print(player)
 		player_points=0
@@ -35,3 +35,15 @@ def keep_score()
 			player_points+=score_word(word)		
 		player_to_points[player]=player_points
 		print ("Total: "+str(player_points))
+		print()
+
+# Allow user to input new turns
+def turn():
+	for player in player_to_words:
+		new_word = input(player + ": ")
+		player_to_words[player].append(new_word)
+	print()
+	keep_score()
+
+keep_score()
+turn()
